@@ -8,7 +8,8 @@
 
 @font-face {
   font-family: 'PT Sans';
-url('../fonts/opensans.woff') format('woff');
+  src: url('../fonts/opensans.woff2') format('woff2');
+  url('../fonts/opensans.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
@@ -42,9 +43,9 @@ a {
   text-decoration: none;
 }
 
-.img {
+img {
   max-width: 100%;
-  height: auto;
+  /*height: auto;*/
 }
 
 .exclusive-products,
@@ -77,7 +78,7 @@ a {
 }
 
 .header-logo {
-  font-family: "Gilroy ExtraBold", "Arial", sans-serif;
+  font-family: 'Gilroy ExtraBold', Arial, sans-serif;
   font-size: 48px;
   font-weight: bolder;
   letter-spacing: -1px;
@@ -755,7 +756,7 @@ input[type='radio'].visually-hidden {
 
 .name-parameters-goods {
   font-size: 13px;
-  line-height: 20px;
+  line-height: 30px;
 }
 
 .category-list {
@@ -832,7 +833,7 @@ input[type='radio'].visually-hidden {
 .category-list-items h3 {
   margin: 30px 0 0;
 }
-
+/*
 .service-wrapper {
   margin: 0 auto 95px;
   padding: 0 0 110px;
@@ -840,6 +841,24 @@ input[type='radio'].visually-hidden {
   width: 100vw;
   left: calc(-50vw + 50%);
   background-color: #e5e5e5;
+}
+*/
+.shop-services {
+  margin: 0 auto 95px;
+  padding: 0 0 110px;
+  position: relative;
+  background-color: #e5e5e5;
+}
+
+.shop-services:before {
+  content: '';
+  background-color: #e5e5e5;
+  width: 100vw;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: calc((100vw - 1160px) / (-2));
+  height: 100%;
 }
 
 .slider-our-services input[type='radio'] {
@@ -856,7 +875,10 @@ input[type='radio'].visually-hidden {
 
 .slider-controls-our-services {
   width: 280px;
-  margin: -50px 0 0;
+  margin-top: -50px;
+  margin-right: 0;
+  margin-left: 0;
+  margin-bottom: 0;
   padding: 0;
   position: relative;
 }
@@ -902,7 +924,7 @@ input[type='radio'].visually-hidden {
   content: '';
   position: absolute;
   top: -100px;
-  left: 337px;
+  left: 278px;
   width: 7px;
   height: 318px;
   background-color: #000000;
@@ -1199,6 +1221,11 @@ input[type='radio'].visually-hidden {
 .main-footer {
   background-color: #464646;
   padding-bottom: 60px;
+  display: flex;
+  width: 100%;
+  min-width: 1160px;
+  flex: 1 0 auto;
+  justify-content: center;
 }
 
 .logo-footer-address-wrapper {
@@ -1236,6 +1263,7 @@ input[type='radio'].visually-hidden {
 .office-address {
   width: 215px;
   font-style: normal;
+  color: #ffffff;
 }
 
 .office-address::after {
@@ -1972,7 +2000,8 @@ a.exit {
   border: none;
 }
 
-legend {
+.bluetooth,
+.color {
   margin: 0;
   padding: 0;
 }
@@ -2043,8 +2072,8 @@ legend {
   opacity: 0.3;
 }
 
-.available-colors input[type="checkbox"]:focus + label::before,
-.available-bluetooth input[type="radio"]:focus + label::before {
+.available-colors input[type='checkbox']:focus + label::before,
+.available-bluetooth input[type='radio']:focus + label::before {
   outline: rgb(59, 153, 252) auto 5px;
 }
 
