@@ -78,10 +78,10 @@ img {
 }
 
 .header-logo {
-  font-family: 'Gilroy ExtraBold', Arial, sans-serif;
+  font-family: 'PT Gilroy', Arial, sans-serif;
   font-size: 48px;
   font-weight: bolder;
-  letter-spacing: -1px;
+  letter-spacing: 1px;
   color: #000000;
   padding: 0;
   margin: 0 0 0 57px;
@@ -406,11 +406,24 @@ img {
   width: 640px;
   padding-top: 22px;
   background-color: #f7e296;
+  position: absolute;
 }
-
 
 .site-nav li:hover .sub-menu {
   display: block;
+}
+
+.sub-menu::before {
+  content: "";
+  bottom: 0;
+  left: -60px;
+  z-index: -1;
+  width: 1160px;
+  height: 100%;
+  padding-top: 0;
+  background-color: #f7e296;
+  position: absolute;
+  top: 0px;
 }
 
 .sub-menu-item {
