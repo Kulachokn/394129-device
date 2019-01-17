@@ -324,13 +324,21 @@ img {
   list-style: none;
   padding: 0 60px;
 }
-
+/*
 .catalog {
   text-transform: uppercase;
   -webkit-box-flex: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
   max-width: 540px;
+}
+*/
+
+.catalog {
+  text-transform: uppercase;
+  width: 260px;
+  margin-right: 280px;
+  margin-left: 0;
 }
 
 .site-nav .catalog {
@@ -346,7 +354,7 @@ img {
   height: 15px;
   background: url('../img/plus.svg') no-repeat 0 0;
 }
-
+/*
 .sub-menu::after {
   content: '';
   position: absolute;
@@ -356,7 +364,7 @@ img {
   z-index: 1;
   left: -60px;
 }
-
+*/
 .supply {
   text-transform: uppercase;
   margin-left: 0;
@@ -373,13 +381,55 @@ img {
   text-transform: uppercase;
 }
 
-.sub-menu {
+.sub-menu a {
+  display: block;
   font-family: 'PT Sans', Arial, sans-serif;
   font-size: 15px;
   line-height: 36px;
   text-transform: none;
   font-weight: normal;
   letter-spacing: 0;
+}
+
+.user-nav,
+.sub-menu {
+  list-style: none;
+}
+
+.sub-menu {
+  margin: 0;
+  padding: 0;
+  display: none;
+  min-height: 142px;
+  font-size: 0;
+  z-index: 5;
+  width: 640px;
+  padding-top: 22px;
+  background-color: #f7e296;
+}
+
+
+.site-nav li:hover .sub-menu {
+  display: block;
+}
+
+.sub-menu-item {
+  display: inline-block;
+  vertical-align: baseline;
+  width: 196px;
+  margin: 0;
+  padding: 0;
+}
+
+.sub-menu li:nth-child(3n+1) {
+  margin-right: 40px;
+}
+
+.sub-menu li:last-child {
+  display: block;
+}
+/*
+.sub-menu {
   -webkit-box-flex: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
@@ -391,19 +441,11 @@ img {
   display: none;
 }
 
-.sub-menu a {
-  display: block;
-}
 
 .site-nav li:hover .sub-menu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-}
-
-.user-nav,
-.sub-menu {
-  list-style: none;
 }
 
 .sub-menu-item {
@@ -424,7 +466,7 @@ img {
 .sub-menu-item:nth-child(3) {
   width: 110px;
 }
-
+*/
 .user-nav a:hover,
 .user-nav a:focus,
 .site-nav a:hover,
@@ -1042,15 +1084,23 @@ input[type='radio'].visually-hidden {
   margin-right: 0;
 }
 
-.brand-list img {
-  -webkit-filter: grayscale(100%) opacity(50%);
-  filter: grayscale(100%) opacity(50%);
+.brand-logo-filter-brand-dij {
+  background: url('../img/brand-1.jpg');
 }
 
-.brand-list img:hover,
-.brand-list img:focus {
-  -webkit-filter: none;
-  filter: none;
+.brand-logo-filter-brand-sp {
+  background: url('../img/brand-2.jpg');
+}
+
+.brand-logo-filter-brand-gopro {
+  background: url('../img/brand-3.jpg');
+}
+.brand-logo-filter-brand-vive {
+  background: url('../img/brand-4.jpg');
+}
+
+.brand-logo-filter image:hover {
+  opacity: 0;
 }
 
 .about-us-contacts-wrapper {
@@ -2354,7 +2404,7 @@ a.exit {
 }
 
 .footer-logo-shop {
-  margin-left: 58px;
+  margin-left: -3px;
   margin-right: 150px;
 }
 
@@ -2464,7 +2514,7 @@ a.exit-footer {
 
 .phone-shop {
   margin-top: 34px;
-  margin-left: 100px;
+  margin-left: 99px;
 }
 
 .social-networks-shop {
