@@ -198,8 +198,8 @@ img {
   background-color: #f7e296;
   color: #000000;
   border: 2px solid #000000;
-  width: 65px;
-  height: 35px;
+  width: 81px;
+  height: 45px;
 }
 
 .search-form-submit:hover {
@@ -519,9 +519,10 @@ input[type='radio'].visually-hidden {
 .exclusive-products {
   margin-top: 0;
   margin-bottom: 80px;
+  position: relative;
 }
 
-.slider-our-goods input[type='radio'] {
+.exclusive-products input[type='radio'] {
   display: none;
 }
 
@@ -547,8 +548,8 @@ input[type='radio'].visually-hidden {
 
 .slider-controls-our-goods {
   position: absolute;
-  top: 541px;
-  left: 1098px;
+  bottom: 182px;
+  right: 42px;
   width: 80px;
   height: 12px;
   text-align: center;
@@ -602,13 +603,13 @@ input[type='radio'].visually-hidden {
 
 .product-slogan {
   margin-top: 80px;
-  margin-bottom: 17px;
+  margin-bottom: 19px;
 }
-
+/*
 .about-product {
   position: relative;
 }
-
+*/
 .monopod {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -632,19 +633,26 @@ input[type='radio'].visually-hidden {
   flex-direction: column;
   width: 500px;
   margin-right: 60px;
+  position: relative;
+}
+
+.monopod-more {
+  position: absolute;
+  bottom: 152px;
+  left: 44px;
 }
 
 .description-good-1 {
   margin-top: 0;
   margin-bottom: 130px;
 }
-
+/*
 .show-more-information {
   position: absolute;
-  top: 321px;
-  left: 44px;
+  bottom: 151px;
+  left: 43px;
 }
-
+*/
 .parameter-selfie-1 {
   width: 150px;
 }
@@ -676,6 +684,13 @@ input[type='radio'].visually-hidden {
   -ms-flex-direction: column;
   flex-direction: column;
   width: 560px;
+  position: relative;
+}
+
+.tracker-more {
+  position: absolute;
+  bottom: 152px;
+  left: 44px;
 }
 
 .description-good-2 {
@@ -707,6 +722,13 @@ input[type='radio'].visually-hidden {
   -ms-flex-direction: column;
   flex-direction: column;
   width: 560px;
+  position: relative;
+}
+
+.quadcopter-more {
+  position: absolute;
+  bottom: 152px;
+  left: 44px;
 }
 
 .slogan-3 {
@@ -823,7 +845,10 @@ input[type='radio'].visually-hidden {
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  margin: 0 auto 184px;
+  margin-top: 0;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 182px;
 }
 
 .category-list-items {
@@ -832,7 +857,7 @@ input[type='radio'].visually-hidden {
 
 .category-list-items img {
   position: absolute;
-  top: 32%;
+  top: 34%;
   left: 51%;
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
@@ -841,7 +866,7 @@ input[type='radio'].visually-hidden {
 
 .category-list-item-monopod img {
   position: absolute;
-  top: 40%;
+  top: 41%;
 }
 
 .category-list-item-monopod h3,
@@ -886,7 +911,10 @@ input[type='radio'].visually-hidden {
 }
 
 .category-list-items h3 {
-  margin: 30px 0 0;
+  margin-top: 32px;
+  margin-right: 0;
+  margin-left: 0;
+  margin-bottom: 0;
 }
 /*
 .service-wrapper {
@@ -951,7 +979,7 @@ input[type='radio'].visually-hidden {
   position: absolute;
   top: 35%;
   left: 0;
-  width: 100%;
+  width: 96%;
   height: 8px;
   background: #f0c52e;
   -webkit-transition: all 300ms ease;
@@ -979,7 +1007,7 @@ input[type='radio'].visually-hidden {
   content: '';
   position: absolute;
   top: -100px;
-  left: 278px;
+  /*left: 278px;*/
   width: 7px;
   height: 318px;
   background-color: #000000;
@@ -1233,13 +1261,13 @@ input[type='radio'].visually-hidden {
 
 .our-contacts img {
   margin-top: 22px;
-  margin-bottom: 17px;
+  margin-bottom: 8px;
 }
 
 .more-about-us,
 .write-us {
   width: 265px;
-  margin-top: 60px;
+  margin-top: 62px;
   margin-bottom: 90px;
   position: relative;
   z-index: 2;
@@ -1300,7 +1328,7 @@ input[type='radio'].visually-hidden {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  margin-top: 62px;
+  margin-top: 59px;
   position: relative;
   margin-right: 100px;
 }
@@ -1311,7 +1339,10 @@ input[type='radio'].visually-hidden {
   line-height: 48px;
   color: #ffc600;
   font-weight: bold;
-  margin: 0 0 21px;
+  margin-top: 0;
+  margin-right: 0;
+  margin-left: 0;
+  margin-bottom: 22px;
 }
 
 .main-footer-logo:hover,
@@ -1362,7 +1393,10 @@ input[type='radio'].visually-hidden {
   -ms-flex-pack: justify;
   justify-content: space-between;
   width: 425px;
-  margin: 50px 0 0;
+  margin-top: 50px;
+  margin-right: 0;
+  margin-left: 0;
+  margin-bottom: 0;
 }
 
 .social-networks {
@@ -1673,19 +1707,6 @@ input[type='radio'].visually-hidden {
 
 .write-us-button:active {
   color: #8d7536;
-}
-
-.modal-map {
-  width: 960px;
-  height: 559px;
-  margin: 50px auto;
-  -webkit-box-shadow: 0 8px 20px 0 #b5b5b5;
-  box-shadow: 0 8px 20px 0 #b5b5b5;
-}
-
-.map-content {
-  padding: 0;
-  margin: 0;
 }
 
 header .shop-navigation {
@@ -2279,6 +2300,7 @@ a.exit {
 
 .stock-keeping-unit__mask .in-garbage {
   display: inline-block;
+  vertical-align: baseline;
   position: absolute;
   top: 180px;
   left: 95px;
@@ -2295,6 +2317,7 @@ a.exit {
 
 .stock-keeping-unit__mask .add-to-compare {
   display: inline-block;
+  vertical-align: baseline;
   position: absolute;
   top: 200px;
   left: 110px;
@@ -2325,7 +2348,7 @@ a.exit {
   position: absolute;
   top: 35%;
   left: 0;
-  width: 100%;
+  width: 98%;
   height: 8px;
   background: #f0c52e;
   -webkit-transition: all 200ms ease;
@@ -2452,6 +2475,7 @@ a.exit {
 
 .profile-shop {
   display: inline-block;
+  vertical-align: baseline;
   width: 256px;
   margin-right: 0;
 }
