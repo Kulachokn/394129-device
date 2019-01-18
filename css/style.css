@@ -9,7 +9,7 @@
 @font-face {
   font-family: 'PT Sans';
   src: url('../fonts/opensans.woff2') format('woff2');
-  url('../fonts/opensans.woff') format('woff');
+url('../fonts/opensans.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
@@ -66,6 +66,21 @@ img {
 .main-header {
   width: 1160px;
   margin: 20px auto 0;
+}
+
+.modal-map {
+  width: 960px;
+  height: 559px;
+  margin: 50px auto;
+  -webkit-box-shadow: 0 8px 20px 0 #b5b5b5;
+  box-shadow: 0 8px 20px 0 #b5b5b5;
+}
+
+.map-overlay {
+  width: 560px;
+  height: 222px;
+  position: relative;
+  top: -222px;
 }
 
 .main-header-logo {
@@ -193,7 +208,7 @@ img {
 
 .search-form-submit {
   position: absolute;
-  top: -8px;
+  top: -18px;
   left: 427px;
   background-color: #f7e296;
   color: #000000;
@@ -398,13 +413,12 @@ img {
 
 .sub-menu {
   margin: 0;
-  padding: 0;
   display: none;
   min-height: 142px;
   font-size: 0;
   z-index: 5;
   width: 640px;
-  padding-top: 22px;
+  padding: 22px 0 0;
   background-color: #f7e296;
   position: absolute;
 }
@@ -423,7 +437,7 @@ img {
   padding-top: 0;
   background-color: #f7e296;
   position: absolute;
-  top: 0px;
+  top: 0;
 }
 
 .sub-menu-item {
@@ -453,29 +467,23 @@ img {
   padding: 0 0 25px;
   display: none;
 }
-
-
 .site-nav li:hover .sub-menu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
-
 .sub-menu-item {
   z-index: 2;
 }
-
 .sub-menu-item:nth-child(1),
 .sub-menu-item:nth-child(4),
 .sub-menu-item:nth-child(6) {
   width: 240px;
 }
-
 .sub-menu-item:nth-child(2),
 .sub-menu-item:nth-child(5) {
   width: 200px;
 }
-
 .sub-menu-item:nth-child(3) {
   width: 110px;
 }
@@ -845,10 +853,7 @@ input[type='radio'].visually-hidden {
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  margin-top: 0;
-  margin-right: auto;
-  margin-left: auto;
-  margin-bottom: 182px;
+  margin: 0 auto 182px;
 }
 
 .category-list-items {
@@ -911,10 +916,7 @@ input[type='radio'].visually-hidden {
 }
 
 .category-list-items h3 {
-  margin-top: 32px;
-  margin-right: 0;
-  margin-left: 0;
-  margin-bottom: 0;
+  margin: 32px 0 0;
 }
 /*
 .service-wrapper {
@@ -958,10 +960,7 @@ input[type='radio'].visually-hidden {
 
 .slider-controls-our-services {
   width: 280px;
-  margin-top: -50px;
-  margin-right: 0;
-  margin-left: 0;
-  margin-bottom: 0;
+  margin: -50px 0 0;
   padding: 0;
   position: relative;
 }
@@ -1306,7 +1305,7 @@ input[type='radio'].visually-hidden {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  margin: 0 auto;
+  /*margin: 0 auto;*/
 }
 
 .main-footer {
@@ -1339,10 +1338,7 @@ input[type='radio'].visually-hidden {
   line-height: 48px;
   color: #ffc600;
   font-weight: bold;
-  margin-top: 0;
-  margin-right: 0;
-  margin-left: 0;
-  margin-bottom: 22px;
+  margin: 0 0 22px;
 }
 
 .main-footer-logo:hover,
@@ -1393,10 +1389,7 @@ input[type='radio'].visually-hidden {
   -ms-flex-pack: justify;
   justify-content: space-between;
   width: 425px;
-  margin-top: 50px;
-  margin-right: 0;
-  margin-left: 0;
-  margin-bottom: 0;
+  margin: 50px 0 0;
 }
 
 .social-networks {
@@ -1563,11 +1556,9 @@ input[type='radio'].visually-hidden {
 .modal {
   z-index: 10;
   position: fixed;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+  display: none;
+  top: calc(50% - 275px);
+  left: calc(50% - 480px);
   background-color: #ffffff;
 }
 
@@ -1580,12 +1571,23 @@ input[type='radio'].visually-hidden {
   box-shadow: 0 8px 20px 0 #b5b5b5;
 }
 
-.map {
+.map-wrapper {
+  width: 560px;
+  height: 222px;
+  margin: 22px 0 8px 0;
+  position: relative;
+}
+
+.map-overlay {
+  z-index: 5;
+  width: 560px;
+  height: 222px;
   cursor: pointer;
 }
 
-.hide {
-  display: none;
+.show {
+  display: block;
+  animation: bounce 0.6s;
 }
 
 .write-us-form {
@@ -1653,7 +1655,8 @@ input[type='radio'].visually-hidden {
   width: 340px;
 }
 
-.write-us-form input:invalid {
+.write-us-form input.invalid,
+.write-us-form textarea.invalid {
   background-color: #f6dada;
 }
 
@@ -2561,4 +2564,48 @@ a.exit-footer {
 .copyright-htmlacademy-shop {
   margin-left: 340px;
   margin-top: 62px;
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
+  }
+}
+
+.modal-error {
+  animation: shake 0.6s;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(-2000px);
+  }
+
+  70% {
+    transform: translateY(30px);
+  }
+
+  90% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
 }
