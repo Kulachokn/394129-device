@@ -78,13 +78,15 @@ img {
 }
 
 .modal-registration {
+  /*display: none;*/
   width: 600px;
-  height: 510px;
+  /*height: 510px;*/
   margin: 50px auto;
   border: 1px solid #ffffff;
   background-color: #f2f2f2;
 }
 
+.modal-sing-in_title,
 .modal-registration_title {
   font-family: 'PT Sans', Arial, sans-serif;
   font-size: 36px;
@@ -93,6 +95,7 @@ img {
   text-align: center;
 }
 
+.modal-sing-in_login-form,
 .modal-registration_form {
   display: flex;
   flex-direction: column;
@@ -137,6 +140,32 @@ img {
   color: #cacaca;
 }
 
+.modal-registration_plot {
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+.modal-registration_group {
+  margin: 0;
+  padding: 0;
+
+}
+
+.invalid-feedback {
+  margin: 0;
+  padding: 0;
+  /*position: absolute;*/
+  /*content: "";*/
+  /*top: 10%;*/
+  /*left: 30%;*/
+}
+
+
+/*.modal-registration_group input:invalid {*/
+  /*border: 5px solid #ffdddd;*/
+/*}*/
+
 .modal-registration_button {
   display: block;
   margin-top: 5px;
@@ -174,6 +203,86 @@ img {
 
 .modal-registration_button:active {
   color: #8d7536;
+}
+
+.modal-sing-in {
+  /*display: block;*/
+  width: 380px;
+  /*height: 510px;*/
+  margin: 50px auto;
+  border: 1px solid #ffffff;
+  background-color: #f2f2f2;
+}
+
+.modal-sing-in-description {
+  font-family: 'PT Sans', Arial, sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  color: #000000;
+  margin: 0 12%;
+  margin-bottom: 10px;
+}
+
+.modal-sing-in_group input {
+  padding: 5px 13px;
+  width: 72%;
+  margin-top: 10px;
+}
+
+.login-checkbox {
+  position: relative;
+
+  padding-left: 30px;
+
+  cursor: pointer;
+}
+
+.login-checkbox:hover,
+.login-checkbox:focus {
+  color: #663d15;
+}
+
+.login-checkbox input[type="checkbox"] + .checkbox-indicator {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 17px;
+  height: 17px;
+
+  border: 2px solid #000000;
+}
+
+.login-checkbox input[type="checkbox"]:focus + .checkbox-indicator {
+  border-color: #663d15;
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+}
+
+.login-checkbox input[type="checkbox"]:checked + .checkbox-indicator::before,
+.login-checkbox input[type="checkbox"]:checked + .checkbox-indicator::after {
+  content: "";
+
+  position: absolute;
+  top: 8px;
+  left: 1px;
+
+  width: 15px;
+  height: 2px;
+
+  background-color: #000000;
+}
+
+.login-checkbox input[type="checkbox"]:checked + .checkbox-indicator::before {
+  transform: rotate(45deg);
+}
+
+.login-checkbox input[type="checkbox"]:checked + .checkbox-indicator::after {
+  transform: rotate(-45deg);
+}
+
+.modal-sing-in_button {
+  margin-bottom: 20px;
 }
 
 .modal-write-us {
@@ -275,6 +384,7 @@ img {
   background-color: #f6dada;
 }
 
+.modal-registration_group span,
 .write-us-form-group label {
   display: block;
   font-family: 'PT Gilroy', Arial, sans-serif;
