@@ -4,9 +4,42 @@
   <meta charset="utf-8">
   <title>HTML Academy: Девайс</title>
   <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/style-min.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+<section class="modal-registration">
+  <h2 class="modal-registration_title">Регистрация</h2>
+  <button class="close-button close-registration">
+    <img src="img/modal-close.svg" width="55" height="55" alt="Закрыть">
+  </button>
+  <form class="modal-registration_form" action="#" method="get">
+    <p class="modal-registration_group">
+      <label for="name">Имя</label>
+      <input type="text" name="fullname" id="name" required placeholder="Ваше имя">
+    </p>
+    <p class="modal-registration_group">
+      <label for="surname">Фамилия</label>
+      <input type="text" name="surname" id="surname" required placeholder="Ваша фамилия">
+    </p>
+    <p class="modal-registration_group">
+      <label for="phone">Ваш телефон:</label>
+      <input type="number" name="phone" id="phone" required placeholder="380000000000">
+    </p>
+    <p class="modal-registration_group">
+      <label for="your-email">Ваш e-mail:</label>
+      <input type="email" name="email" id="your-email" required placeholder="email@example.com">
+    </p>
+    <p class="modal-registration_group">
+      <label for="user-password">Пароль</label>
+      <input id="user-password" type="password" name="password" pattern="[0-9]{7,}" placeholder="Введите пароль">
+    </p>
+    <p class="modal-registration_group">
+      <label for="confirmation-password">Пароль</label>
+      <input id="confirmation-password" type="password" name="confirmation-password" pattern="[0-9]{7,}" placeholder="Повторите пароль">
+    </p>
+    <button class="button" type="submit">Создать</button>
+  </form>
+</section>
 <section class="modal modal-write-us">
   <h2 class="visually-hidden">Напишите нам</h2>
   <button class="close-button close-write-us">
@@ -160,44 +193,38 @@
     <ul class="category-list">
       <li class="category-list-items category-list-item-real">
         <a href="shop.html">
-          <p class="category-items"><img class="category-image" src="img/popular-1.svg" width="97" height="55"
-                                         alt="Виртуальная реальность"></p>
+          <p class="category-items"><img class="category-image" src="img/popular-1.svg" width="97" height="55" alt="Виртуальная реальность"></p>
           <h3 class="category-name">Виртуальная реальность</h3>
         </a>
       </li>
       <li class="category-list-items category-list-item-monopod">
         <a href="shop.html">
-          <p class="category-items"><img class="category-image" src="img/popular-2.svg" width="86" height="117"
-                                         alt="Моноподы для селфи"></p>
+          <p class="category-items"><img class="category-image" src="img/popular-2.svg" width="86" height="117" alt="Моноподы для селфи"></p>
           <h3 class="category-name">Моноподы для селфи</h3>
         </a>
       </li>
       <li class="category-list-items">
         <a href="shop.html">
-          <p class="category-items"><img class="category-image" src="img/popular-3.svg" width="71" height="87"
-                                         alt="Экшн-камеры"></p>
+          <p class="category-items"><img class="category-image" src="img/popular-3.svg" width="71" height="87" alt="Экшн-камеры"></p>
           <h3 class="category-name">Экшн-камеры</h3>
         </a>
       </li>
       <li class="category-list-items">
         <a href="shop.html">
-          <p class="category-items"><img class="category-image" src="img/popular-4.svg" width="107" height="65"
-                                         alt="Фитнес-браслеты"></p>
+          <p class="category-items"><img class="category-image" src="img/popular-4.svg" width="107" height="65" alt="Фитнес-браслеты"></p>
           <h3 class="category-name">Фитнес-браслеты</h3>
         </a>
       </li>
       <li class="category-list-items">
         <a href="shop.html">
-          <p class="category-items"><img class="category-image" src="img/popular-5.svg" width="56" height="98"
-                                         alt="Умные часы">
+          <p class="category-items"><img class="category-image" src="img/popular-5.svg" width="56" height="98" alt="Умные часы">
           </p>
           <h3 class="category-name">Умные часы</h3>
         </a>
       </li>
       <li class="category-list-items">
         <a href="shop.html">
-          <p class="category-items"><img class="category-image" src="img/popular-6.svg" width="132" height="69"
-                                         alt="Квадрокоптеры"></p>
+          <p class="category-items"><img class="category-image" src="img/popular-6.svg" width="132" height="69" alt="Квадрокоптеры"></p>
           <h3 class="category-name">Квадрокоптеры</h3>
         </a>
       </li>
