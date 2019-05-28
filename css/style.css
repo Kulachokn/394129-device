@@ -79,7 +79,7 @@ img {
 
 .modal-registration {
   width: 600px;
-  height: 400px;
+  height: 510px;
   margin: 50px auto;
   border: 1px solid #ffffff;
   background-color: #f2f2f2;
@@ -108,15 +108,72 @@ img {
   margin-bottom: 20px;
 }
 
-.modal-registration_group label {
+/*.modal-registration_group label {*/
+  /*font-family: 'PT Sans', Arial, sans-serif;*/
+  /*font-size: 16px;*/
+  /*line-height: 18px;*/
+  /*text-transform: uppercase;*/
+  /*color: #222222;*/
+/*}*/
+
+.modal-registration_group span {
   margin-right: 20px;
   font-family: 'PT Sans', Arial, sans-serif;
-  font-size: 14px;
-  line-height: 18px;
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 37px;
+  text-transform: uppercase;
+  color: #464646;
 }
 
 .modal-registration_group input {
-  flex-grow: 2;
+  flex-grow: 1;
+  border: solid #e6e6e6;
+  margin-left: 15px;
+  font-size: 12px;
+  line-height: 18px;
+  text-transform: uppercase;
+  padding: 8px;
+  color: #cacaca;
+}
+
+.modal-registration_button {
+  display: block;
+  margin-top: 5px;
+  margin-left: 25px;
+  background: none;
+  position: relative;
+  font-family: 'PT Gilroy', Arial, sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  vertical-align: middle;
+  border: none;
+  z-index: 2;
+}
+
+.modal-registration_button::before {
+  content: '';
+  position: absolute;
+  top: 31%;
+  left: 30%;
+  width: 38%;
+  height: 8px;
+  background: #f0c52e;
+  -webkit-transition: all 300ms ease;
+  -o-transition: all 300ms ease;
+  transition: all 300ms ease;
+  z-index: -1;
+}
+
+.modal-registration_button:hover::before {
+  height: 165%;
+  top: -9px;
+}
+
+.modal-registration_button:active {
+  color: #8d7536;
 }
 
 .modal-write-us {
