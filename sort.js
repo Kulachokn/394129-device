@@ -1,16 +1,17 @@
 'use strict';
 
-let chosenSortBy = 'byPrice';
-let chosenOrder = 'descending';
+let chosenSortBy = document
+  .querySelector('.sort .sort-by.selected-sort')
+  .getAttribute('data-sort-by');
+let chosenOrder = document
+  .querySelector('.sort-function .selected-mode')
+  .getAttribute('data-sort-order');
 
 function insertAfter(elem, refElem) {
   return refElem.parentNode.insertBefore(elem, refElem.nextSibling);
 }
 
 let sort = document.querySelector('.sort');
-let sortByPrice = sort.querySelector('.sort-by_price');
-let sortByType = sort.querySelector('.sort-by_type');
-let sortByPopular = sort.querySelector('.sort-by_popularity');
 let sortBtnAsc = document.querySelector('.sort-function .ascending');
 let sortBtnDesc = document.querySelector('.sort-function .descending');
 
@@ -29,17 +30,17 @@ sortBtnDesc.addEventListener('click', sortByClickMode);
 
 function sortByClickHandler(evt) {
   evt.preventDefault();
-  sortByPrice.classList.remove('selected-sort');
-  sortByType.classList.remove('selected-sort');
-  sortByPopular.classList.remove('selected-sort');
+  for (let child of sort.children) {
+    child.classList.remove('selected-sort')
+  }
   this.classList.add('selected-sort');
   chosenSortBy = this.getAttribute('data-sort-by');
   sortFn();
 }
 
-sortByPrice.addEventListener('click', sortByClickHandler);
-sortByType.addEventListener('click', sortByClickHandler);
-sortByPopular.addEventListener('click', sortByClickHandler);
+for (let child of sort.children) {
+  child.addEventListener('click', sortByClickHandler);
+}
 
 function sortFn() {
   let nav = document.querySelector('.goods-list');
