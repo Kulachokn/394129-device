@@ -2789,3 +2789,33 @@ header .shop-navigation {
     transform: translateY(0);
   }
 }
+
+.shopping-cart {
+  width: 760px;
+  margin: 80px auto;
+  background: #FFFFFF;
+  box-shadow: 1px 2px 3px 0px rgba(0,0,0,0.10);
+  border-radius: 6px;
+}
+
+.basket_title {
+  font-family: "Gilroy", "Arial", sans-serif;
+  font-size: 36px;
+  line-height: 36px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #000000;
+}
+
+.basket_item {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 20px;
+}
+
+.basket_description-item {
+  font-family: 'PT Sans', Arial, sans-serif;
+  font-size: 16px;
+  line-height: 16px;
+}
