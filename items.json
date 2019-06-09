@@ -1,0 +1,27 @@
+{
+  "11123" : {
+    "price" : 500,
+    "description" : "Любительская селфи-палка",
+    "image" : "img/item-1.jpg"
+},
+  "11124" : {
+    "price" : 1500,
+    "description" : "Профессиональная селфи-палка",
+    "image" : "img/item-2.jpg"
+  },
+  "11125" : {
+    "price" : 2500,
+    "description" : "Непотопляемая селфи-палка",
+    "image" : "img/item-3.jpg"
+  },
+  "11126" : {
+    "price" : 4900,
+    "description" : "Селфи-палка «Следуй за мной»",
+    "image" : "img/item-4.jpg"
+  },
+  "11127" : {
+    "price" : 3000,
+    "description" : "Компактная селфи-палка»",
+    "image" : "img/item-5.jpg"
+  }
+}

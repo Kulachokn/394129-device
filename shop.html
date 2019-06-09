@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <title>Каталог товаров</title>
   <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/style-min.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 <header class="main-header">
@@ -95,8 +95,12 @@
               <div class="scale">
                 <div class="bar"></div>
               </div>
-              <div class="range-toggle range-toggle-min"></div>
-              <div class="range-toggle range-toggle-max"></div>
+              <div class="range-toggle range-toggle-min">
+
+              </div>
+              <div class="range-toggle range-toggle-max">
+
+              </div>
             </div>
             <div class="selected-price">
               <span class="left-slider"><small>от 0</small></span>
@@ -146,75 +150,92 @@
       </div>
       <div class="catalog-pagination-wrapper">
         <h1 class="visually-hidden">Список моноподов</h1>
-        <ul class="goods-list">
-          <li class="stock-keeping-unit" data-sort-price="500" data-sort-type="1" data-sort-popularity="2">
-            <div class="stock-keeping-unit__inner">
-              <a href="shop.html">
-              <p class="sku-picture">
-                  <img src="img/item-1.jpg" width="360" height="380" alt="Любительская селфи-палка">
-              </p>
-              <h2 class="name-price-of-goods signature">
-                  <span class="sku-name">Любительская селфи-палка</span>
-                  <span class="sku-price">500 руб.</span>
-              </h2>
-              </a>
-            </div>
-            <div class="stock-keeping-unit__mask">
-              <a class="in-garbage button-decoration mask" href="#">в корзину</a>
-              <a class="add-to-compare mask" href="#">Добавить к сравнению</a>
-            </div>
-          </li>
-          <li class="stock-keeping-unit" data-sort-price="1500" data-sort-type="4" data-sort-popularity="3">
-            <div class="stock-keeping-unit__inner">
-              <a href="shop.html">
-              <p class="sku-picture">
-                  <img src="img/item-2.jpg" width="360" height="380" alt="Профессиональная селфи-палка">
-              </p>
-              <h2 class="name-price-of-goods signature">
-                  <span class="sku-name sku-name--1">Профессиональная селфи-палка</span>
-                  <span class="sku-price">1 500 руб.</span>
-              </h2>
-              </a>
-            </div>
-            <div class="stock-keeping-unit__mask">
-              <a class="in-garbage button-decoration mask" href="#">в корзину</a>
-              <a class="add-to-compare mask" href="#">Добавить к сравнению</a>
-            </div>
-          </li>
-          <li class="stock-keeping-unit" data-sort-price="2500" data-sort-type="3" data-sort-popularity="4">
-            <div class="stock-keeping-unit__inner">
-              <a href="shop.html">
-              <p class="sku-picture">
-                  <img src="img/item-3.jpg" width="360" height="380" alt="Непотопляемая селфи-палка">
-              </p>
-              <h2 class="name-price-of-goods signature">
-                  <span class="sku-name">Непотопляемая селфи-палка</span>
-                  <span class="sku-price">2 500 руб.</span>
-              </h2>
-              </a>
-            </div>
-            <div class="stock-keeping-unit__mask">
-              <a class="in-garbage button-decoration mask" href="#">в корзину</a>
-              <a class="add-to-compare mask" href="#">Добавить к сравнению</a>
-            </div>
-          </li>
-          <li class="stock-keeping-unit" data-sort-price="4900" data-sort-type="2" data-sort-popularity="1">
-            <div class="stock-keeping-unit__inner new">
-              <a href="shop.html">
-              <p class="sku-picture">
-                  <img src="img/item-4.jpg" width="360" height="380" alt="Селфи-палка «Следуй за мной»">
-              </p>
-              <h2 class="name-price-of-goods signature">
-                  <span class="sku-name sku-name--1">Селфи-палка «Следуй за мной»</span>
-                  <span class="sku-price">4 900 руб.</span>
-              </h2>
-              </a>
-            </div>
-            <div class="stock-keeping-unit__mask">
-              <a class="in-garbage button-decoration mask" href="#">в корзину</a>
-              <a class="add-to-compare mask" href="#">Добавить к сравнению</a>
-            </div>
-          </li>
+        <ul class="good"> <!--Изменен класс   goods-list   id="out"-->
+          <!--<li class="stock-keeping-unit" data-sort-price="500" data-sort-type="1" data-sort-popularity="2">-->
+            <!--<div class="stock-keeping-unit__inner">-->
+              <!--<a href="shop.html">-->
+              <!--<p class="sku-picture">-->
+                  <!--<img class="good__image" src="img/item-1.jpg" width="360" height="380" alt="Любительская селфи-палка">-->
+              <!--</p>-->
+              <!--<h2 class="name-price-of-goods signature">-->
+                  <!--<span class="sku-name">Любительская селфи-палка</span>-->
+                  <!--<span class="sku-price">500 руб.</span>-->
+              <!--</h2>-->
+              <!--</a>-->
+            <!--</div>-->
+            <!--<div class="stock-keeping-unit__mask">-->
+              <!--<a class="in-garbage button-decoration mask" href="#">в корзину</a>-->
+              <!--<a class="add-to-compare mask" href="#">Добавить к сравнению</a>-->
+            <!--</div>-->
+          <!--</li>-->
+          <!--<li class="stock-keeping-unit" data-sort-price="1500" data-sort-type="4" data-sort-popularity="3">-->
+            <!--<div class="stock-keeping-unit__inner">-->
+              <!--<a href="shop.html">-->
+              <!--<p class="sku-picture">-->
+                  <!--<img class="good__image" src="img/item-2.jpg" width="360" height="380" alt="Профессиональная селфи-палка">-->
+              <!--</p>-->
+              <!--<h2 class="name-price-of-goods signature">-->
+                  <!--<span class="sku-name sku-name&#45;&#45;1">Профессиональная селфи-палка</span>-->
+                  <!--<span class="sku-price">1 500 руб.</span>-->
+              <!--</h2>-->
+              <!--</a>-->
+            <!--</div>-->
+            <!--<div class="stock-keeping-unit__mask">-->
+              <!--<a class="in-garbage button-decoration mask" href="#">в корзину</a>-->
+              <!--<a class="add-to-compare mask" href="#">Добавить к сравнению</a>-->
+            <!--</div>-->
+          <!--</li>-->
+          <!--<li class="stock-keeping-unit" data-sort-price="2500" data-sort-type="3" data-sort-popularity="4">-->
+            <!--<div class="stock-keeping-unit__inner">-->
+              <!--<a href="shop.html">-->
+              <!--<p class="sku-picture">-->
+                  <!--<img class="good__image" src="img/item-3.jpg" width="360" height="380" alt="Непотопляемая селфи-палка">-->
+              <!--</p>-->
+              <!--<h2 class="name-price-of-goods signature">-->
+                  <!--<span class="sku-name">Непотопляемая селфи-палка</span>-->
+                  <!--<span class="sku-price">2 500 руб.</span>-->
+              <!--</h2>-->
+              <!--</a>-->
+            <!--</div>-->
+            <!--<div class="stock-keeping-unit__mask">-->
+              <!--<a class="in-garbage button-decoration mask" href="#">в корзину</a>-->
+              <!--<a class="add-to-compare mask" href="#">Добавить к сравнению</a>-->
+            <!--</div>-->
+          <!--</li>-->
+          <!--<li class="stock-keeping-unit" data-sort-price="4900" data-sort-type="2" data-sort-popularity="1">-->
+            <!--<div class="stock-keeping-unit__inner new">-->
+              <!--<a href="shop.html">-->
+              <!--<p class="sku-picture">-->
+                  <!--<img class="good__image" src="img/item-4.jpg" width="360" height="380" alt="Селфи-палка «Следуй за мной»">-->
+              <!--</p>-->
+              <!--<h2 class="name-price-of-goods signature">-->
+                  <!--<span class="sku-name sku-name&#45;&#45;1">Селфи-палка «Следуй за мной»</span>-->
+                  <!--<span class="sku-price">4 900 руб.</span>-->
+              <!--</h2>-->
+              <!--</a>-->
+            <!--</div>-->
+            <!--<div class="stock-keeping-unit__mask">-->
+              <!--<a class="in-garbage button-decoration mask" href="#">в корзину</a>-->
+              <!--<a class="add-to-compare mask" href="#">Добавить к сравнению</a>-->
+            <!--</div>-->
+          <!--</li>-->
+          <!--<li class="stock-keeping-unit" data-sort-price="200" data-sort-type="5" data-sort-popularity="5">-->
+            <!--<div class="stock-keeping-unit__inner">-->
+              <!--<a href="shop.html">-->
+                <!--<p class="sku-picture">-->
+                  <!--<img class="good__image" src="img/item-5.jpg" width="360" height="380" alt="Компактная селфи-палка">-->
+                <!--</p>-->
+                <!--<h2 class="name-price-of-goods signature">-->
+                  <!--<span class="sku-name sku-name&#45;&#45;1">Компактная селфи-палка</span>-->
+                  <!--<span class="sku-price">3 000 руб.</span>-->
+                <!--</h2>-->
+              <!--</a>-->
+            <!--</div>-->
+            <!--<div class="stock-keeping-unit__mask">-->
+              <!--<a class="in-garbage button-decoration mask" href="#">в корзину</a>-->
+              <!--<a class="add-to-compare mask" href="#">Добавить к сравнению</a>-->
+            <!--</div>-->
+          <!--</li>-->
         </ul>
         <ul class="pagination">
           <li class="page-prev"><a class="pagination-page pagination-page-prev" href="#prev">Назад</a></li>
@@ -309,6 +330,7 @@
   </div>
 </footer>
 <script src="js/index.js"></script>
-<script src="sort.js"></script>
+<script src="js/sort.js"></script>
+<script src="js/add_items.js"></script>
 </body>
 </html>
